@@ -60,6 +60,7 @@ nav ul li a:hover {
     padding: 50px 20px;
     background-color: #fff;
     margin-top: 80px; /* Adjust for fixed navigation */
+    border-radius: 10px;
 }
 
 .landing-section h2 {
@@ -67,24 +68,30 @@ nav ul li a:hover {
     margin-bottom: 20px;
 }
 
-.movie-list {
+/* Movie and TV show poster styles */
+.movie-list, .tvshow-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
-.movie {
+.movie, .tvshow {
     width: 45%;
     margin-bottom: 20px;
     background-color: #f9f9f9;
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
 }
 
-.movie img {
+.movie img, .tvshow img {
     width: 100%;
     height: auto;
-    border-radius: 5px;
+    border-radius: 10px;
+}
+
+.movie:hover, .tvshow:hover {
+    transform: translateY(-5px);
 }
 
 /* Shop section styles */
@@ -99,21 +106,45 @@ nav ul li a:hover {
     margin-bottom: 20px;
     background-color: #f9f9f9;
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 10px;
     text-align: center;
 }
 
 .shop-item img {
     width: 80%;
     height: auto;
-    border-radius: 5px;
+    border-radius: 10px;
     margin-bottom: 10px;
 }
 
-/* Footer styles */
-footer {
-    text-align: center;
-    padding: 20px 0;
+/* Search form styles */
+.search-form {
+    margin-top: 20px;
+    display: flex;
+}
+
+#searchInput {
+    flex: 1;
+    padding: 8px;
+    border: none;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+#searchInput:focus {
+    outline: none;
+}
+
+#searchButton {
     background-color: #333;
     color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    cursor: pointer;
+}
+
+#searchButton:hover {
+    background-color: #555;
 }
